@@ -82,6 +82,10 @@ a:hover, button:hover {
    color: var(--text-dark);
 }
 
+header {
+   padding: 20px;
+}
+
 button {
    cursor: pointer;
    background-color: var(--background);
@@ -91,8 +95,15 @@ button {
    border: 1px solid var(--text-dark);
 }
 
+.header-container {
+   display: flex;
+   justify-content: space-between;
+}
 
-
+.hamburger {
+   display: none;
+   cursor: pointer;
+}
 
 .btn-one {
    margin-right: 15px;
@@ -108,13 +119,26 @@ button {
    color: var(--background);
 }
 
+/* HIDE HEADER ITEMS ON MOBILE AND SHOWS HAMBURGER */
 
+@media screen and (max-width: 900px) {
+   .desktop {
+      display: none;
+   }
+   .hamburger {
+      display: block;
+   }
+}
 
+.main-section-text {
+   margin-top: 50px;
+   text-align: center;
+}
 
 .main-section-text button {
    align-self: flex-start;
 
-   padding: 15px 30px;
+   padding: 10px 30px;
    color: var(--background);
    background-color: var(--text-dark);
 
