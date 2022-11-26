@@ -95,19 +95,18 @@ button {
    border: 1px solid var(--text-dark);
 }
 
+/* HEADER MOBILE STYLING  */
+
 .header-container {
    display: flex;
    justify-content: space-between;
+   max-width: 1400px;
+   margin: 0 auto;
 }
 
 .hamburger {
    display: none;
    cursor: pointer;
-}
-
-.btn-one {
-   margin-right: 15px;
-   border: transparent;
 }
 
 .btn-two {
@@ -119,10 +118,13 @@ button {
    color: var(--background);
 }
 
-/* HIDE HEADER ITEMS ON MOBILE AND SHOWS HAMBURGER */
+/* HIDE HEADER ITEMS ON MOBILE AND SHOWS HAMBURGER  */
 
-@media screen and (max-width: 900px) {
-   .desktop {
+@media screen and (max-width: 750px) {
+   .desktop:not(:first-child) {
+      display: none;
+   }
+   .menu-item {
       display: none;
    }
    .hamburger {
@@ -130,9 +132,53 @@ button {
    }
 }
 
+/* DESKTOP HEADER STYLING  */
+
+@media screen and (min-width: 751px) {
+   .logo {
+      margin-right: 40px;
+   }
+   .header-container {
+      justify-content: space-between;
+      align-items: center;
+   }
+   .header-desktop {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+   .header-section-one {
+      display: flex;
+      gap: 20px;
+   }
+   .header-section-two {
+      justify-self: flex-end;
+   }
+   .btn-one {
+      margin-right: 10px;
+      border: transparent;
+   }
+}
+
+/* MAIN SECTION MOBILE STYLING  */
+
+.main-section-hero {
+   margin: 0 auto;
+}
+
 .main-section-text {
    margin-top: 50px;
    text-align: center;
+   padding: 15px;
+}
+
+.main-section-text h1 {
+   font-size: 2.4rem;
+   margin-bottom: 15px;
+}
+
+.description {
+   margin-bottom: 25px;
 }
 
 .main-section-text button {
@@ -143,9 +189,59 @@ button {
    background-color: var(--text-dark);
 
    transition: all .3s;
+
+   margin-bottom: 50px;
 }
 
 .main-section-text button:hover {
    color: var(--text-dark);
    background-color: var(--background);
+}
+
+/* MAIN SECTION DESKTOP STYLING  */
+
+@media screen and (min-width: 751px) {
+   .main-container {
+      display: flex;
+      flex-direction: row-reverse;
+      gap: 100px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 50px 20px 0px 20px;
+   }
+
+   .main-section-text {
+      text-align: start;
+      padding: 0;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+   }
+
+   .main-section-text h1 {
+      margin-top: 50px;
+      margin-bottom: 35px;
+      font-size: 4rem;
+      line-height: 1;
+   }
+
+   .main-section-cta span {
+      display: block;
+   }
+
+   .description {
+      margin-bottom: 45px;
+   }
+
+   .main-section-hero {
+      flex-basis: 50%;
+   }
+}
+
+/* FOOTER STYLING  */
+
+.clients {
+   display: flex;
+   justify-content: space-between;
 }
